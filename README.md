@@ -27,9 +27,9 @@
 
 <h3>Install apache into AWS EC2 instance</h3>
 <p><strong>Run the below command to update, install and check status of apache</strong> <br> 
-<pre>sudo apt update <br>
-sudo apt install apache2 -y <br>
-sudo systemctl status apache2 </pre>
+<pre>sudo apt update <i>#to update the necessary dependables</i><br>
+sudo apt install apache2 -y <i>#this will install apache2 into the server</i><br>
+sudo systemctl status apache2 <i>#to check the status of the webserver is it is running</i></pre>
   
 </p>
 
@@ -69,7 +69,7 @@ sudo vim /etc/apache2/sites-available/projectlamp.conf <br>
 </p>
 <p>Step 4: Reload apache so the above changes can take effect with the command below:
 <pre>sudo systemctl reload apache</pre> <br>
-<strong>Note:</strong> Our website is not active but the root /var/www/projectlamp is still empty so we need to create a new <i>index.html</i> file inside the projectlamp directory <br>
+<strong>Note:</strong> Our website is now active but the root /var/www/projectlamp is still empty so we need to create a new <i>index.html</i> file inside the projectlamp directory <br>
 <pre>
   vim /var/www/projectlamp/index.html
 </pre>
