@@ -83,28 +83,28 @@ Now you can go to your browser and open your website <strong>URL</strong> using 
   Inside the /etc/apache2/mods-enabled/dir.conf file we would edit the order in which index.php is listed </p>
   <pre>
     sudo vim /etc/apache2/mods-enabled/dir.conf 
-  </pre> <br>
+  </pre> 
+  <p>Change the orrder of precedence using the following:</p>
   <pre>
     <IfModule mod_dif.c>
 DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
 </IfModule>
-  </pre> <br>
-  Once the file is saved, we would reload apache <br>
+  </pre> 
+ <p> Once the file is saved, we would reload apache </p>
   <pre>
     sudo systemctl reload apache2
   </pre>
-</p>
 <p>
-Create a new file index.php inside /var/www/projectlamp directory <br>
+Create a new file index.php inside /var/www/projectlamp directory </p>
   <pre>
     vim /var/www/projectlamp/index.php
-  </pre> <br>
-  This create a blank file, copy the following inside the file <br>
+  </pre> 
+  This create a blank file, copy the following inside the file 
   <pre>
     <?php
     phpinfo()
-  </pre> <br>
-  Save and close the file, then refresh your page </p>
+  </pre> 
+ <p>Save and close the file, then refresh your page </p>
   <img width="795" alt="php preview" src="https://github.com/sheezylion/LAMP-stack/assets/142250556/0dc31205-d220-40be-a2ad-72756f15932f">
 <br>
 
