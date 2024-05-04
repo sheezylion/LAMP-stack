@@ -78,9 +78,9 @@ Note: <i>Click the esc key and type :wq to save and exit the vi editor</i> <br>
 Now you can go to your browser and open your website <strong>URL</strong> using your public ip-address. You should have this display: </p> <br>
 <img width="860" alt="echo lamp" src="https://github.com/sheezylion/LAMP-stack/assets/142250556/d9e477ff-6a90-41ef-8b52-50768083533b">
 
-<p>Step 5: Enable php on website <br>
-Because of apache <i>directory index</i> settings, the index.html file will always take precedence over index.php file, hence to change this behaviour we need to do some settings.
-  Inside the /etc/apache2/mods-enabled/dir.conf file we would edit the order in which index.php is listed <br>
+<h3>Enable php on website</h3>
+<p>Because of apache <i>directory index</i> settings, the index.html file will always take precedence over index.php file, hence to change this behaviour we need to do some settings. <br>
+  Inside the /etc/apache2/mods-enabled/dir.conf file we would edit the order in which index.php is listed </p>
   <pre>
     sudo vim /etc/apache2/mods-enabled/dir.conf 
   </pre> <br>
@@ -95,7 +95,7 @@ DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm
   </pre>
 </p>
 <p>
-  Step 6: Create a new file index.php inside /var/www/projectlamp directory <br>
+Create a new file index.php inside /var/www/projectlamp directory <br>
   <pre>
     vim /var/www/projectlamp/index.php
   </pre> <br>
